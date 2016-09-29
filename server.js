@@ -6,13 +6,13 @@ var app = express();
 app.use(morgan('combined')); 
 
 app.get('/articleone',function(req,res){
-    res.send('hi this is aticle one')});
+    res.send('hi this is article one')});
 
 app.get('/articletwo',function(req,res){
-    res.send('hi this is aticle two')});
+    res.send('hi this is article two')});
 
 app.get('/articlethree',function(req,res){
-    res.send('hi this is aticle three')});
+    res.send('hi this is article three')});
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
