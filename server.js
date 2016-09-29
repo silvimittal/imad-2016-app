@@ -11,10 +11,14 @@ app.get('/articleone',function(req,res){
 });
 
 app.get('/articletwo',function(req,res){
-    res.send('hi this is article two')});
+     res.sendFile(path.join(__dirname, 'ui', 'articletwo.html'));
+    
+});
 
 app.get('/articlethree',function(req,res){
-    res.send('hi this is article three')});
+    res.sendFile(path.join(__dirname, 'ui', 'articlethree.html'));
+    
+});
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
