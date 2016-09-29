@@ -3,7 +3,16 @@ var morgan = require('morgan');
 var path = require('path');
 
 var app = express();
-app.use(morgan('combined'));
+app.use(morgan('combined')); 
+
+app.get('article one',function(req,res){
+    res.send('hi this is aticle one')});
+
+app.get('article two',function(req,res){
+    res.send('hi this is aticle two')});
+
+app.get('article three',function(req,res){
+    res.send('hi this is aticle three')});
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
